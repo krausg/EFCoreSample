@@ -7,7 +7,7 @@ namespace EFCoreSample.Core
     {
         static void Main(string[] args)
         {
-            var dao = new DatabaseDAO();
+            var dao = new SimpleDAO();
             Console.WriteLine("TestConnection!");
             dao.TestConnect();
             Console.WriteLine("Delete DataBase and Reset Table!");
