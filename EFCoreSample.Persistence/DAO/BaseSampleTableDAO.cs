@@ -4,12 +4,12 @@ using System.Text;
 
 namespace EFCoreSample.Persistence.DAO
 {
-    public abstract class BaseSampleDBDAO
+    public abstract class BaseSampleTableDAO
     {
 
         internal string ConnectionString { get; }
 
-        public BaseSampleDBDAO(string ConnectionString)
+        public BaseSampleTableDAO(string ConnectionString)
         {
             this.ConnectionString = ConnectionString;
         }

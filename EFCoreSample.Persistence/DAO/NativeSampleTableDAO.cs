@@ -7,9 +7,9 @@ namespace EFCoreSample.Persistence.DAO
     using EFCoreSample.Util.Resource;
     using Util;
 
-    public class NativeSampleDBDAO : BaseSampleDBDAO
+    public class NativeSampleTableDAO : BaseSampleTableDAO
     {
-        public NativeSampleDBDAO(string ConnectionString) : base(ConnectionString)
+        public NativeSampleTableDAO(string ConnectionString) : base(ConnectionString)
         {
         }
 

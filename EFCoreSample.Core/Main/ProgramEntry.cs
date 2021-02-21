@@ -25,7 +25,7 @@ namespace EFCoreSample.Core.Main
             if (response == '1')
             {
 
-                var dao = new NativeSampleDBDAO(ConnectionString);
+                var dao = new NativeSampleTableDAO(ConnectionString);
                 Console.WriteLine("TestConnection!");
                 dao.TestConnect();
                 Console.WriteLine("Delete DataBase and Reset Table!");
@@ -39,7 +39,7 @@ namespace EFCoreSample.Core.Main
             else if (response == '2')
             {
 
-                var dao = new EFSampleDBDAO(ConnectionString);
+                var dao = new EFSampleTableDAO(ConnectionString);
                 Console.WriteLine("TestConnection!");
                 dao.TestConnect();
                 Console.WriteLine("Delete DataBase and Reset Table!");

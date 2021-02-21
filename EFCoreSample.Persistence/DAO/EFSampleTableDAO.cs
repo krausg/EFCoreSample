@@ -9,21 +9,21 @@ namespace EFCoreSample.Persistence.DAO
     using Domain;
     using EFCoreSample.Util.Resource;
 
-    public class EFSampleDBDAO : BaseSampleDBDAO
+    public class EFSampleTableDAO : BaseSampleTableDAO
     {
 
-        public EFSampleDBDAO(string ConnectionString) : base(ConnectionString) { }
+        public EFSampleTableDAO(string ConnectionString) : base(ConnectionString) { }
 
         public override void ResetDB()
         {
-            using (EFSampleDBContext context = new EFSampleDBContext(ConnectionString))
+            using (EFSampleTableContext context = new EFSampleTableContext(ConnectionString))
             {
                 var resetStmt = EmbeddedResourceLoader.ReadFullContent("Scripts", "resetDB.sql");
                 context.Database.ExecuteSqlRaw(resetStmt);
                 context.SaveChanges();
 
-                SampleDB newEnt = new SampleDB { Name = "Test" };
-                context.SampleDBs.Add(newEnt);
+                SampleTable newEnt = new SampleTable { NAME = "Test" };
+                context.SampleTable.Add(newEnt);
                 context.SaveChanges();
             }
 
@@ -31,15 +31,15 @@ namespace EFCoreSample.Persistence.DAO
 
         public override void SelectByName(string name)
         {
-            using (EFSampleDBContext context = new EFSampleDBContext(ConnectionString))
+            using (EFSampleTableContext context = new EFSampleTableContext(ConnectionString))
             {
-                (from t in context.SampleDBs where t.Name.Contains(name) select t).ToList().ForEach(Console.WriteLine);
+                (from t in context.SampleTable where t.NAME.Contains(name) select t).ToList().ForEach(Console.WriteLine);
             }
         }
 
         public override void TestConnect()
         {
-            using (EFSampleDBContext context = new EFSampleDBContext(ConnectionString))
+            using (EFSampleTableContext context = new EFSampleTableContext(ConnectionString))
             {
                 context.Database.CanConnect();
             }
@@ -47,9 +47,9 @@ namespace EFCoreSample.Persistence.DAO
 
         public override void TestSQLQuery()
         {
-            using (EFSampleDBContext context = new EFSampleDBContext(ConnectionString))
+            using (EFSampleTableContext context = new EFSampleTableContext(ConnectionString))
             {
-                (from t in context.SampleDBs select t).ToList().ForEach(Console.WriteLine);
+                (from t in context.SampleTable select t).ToList().ForEach(Console.WriteLine);
             }
         }
 

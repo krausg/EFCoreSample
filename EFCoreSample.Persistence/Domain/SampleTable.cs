@@ -4,17 +4,17 @@ using System.Text;
 
 namespace EFCoreSample.Persistence.Domain
 {
-    public class SampleDB
+    public class SampleTable
     {
         public int ID { get; set; }
-        public String Name { get; set; }
+        public String NAME { get; set; }
 
 
-        public SampleDB() { }
+        public SampleTable() { }
 
         public override string ToString()
         {
-            return "User [id=" + this.ID + ", name=" + Name + "]";
+            return "User [id=" + this.ID + ", name=" + NAME + "]";
         }
 
     }

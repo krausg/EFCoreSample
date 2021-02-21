@@ -4,9 +4,9 @@ namespace EFCoreSample.Persistence.Context
 {
     using Domain;
 
-    public class EFSampleDBContext : DbContext
+    public class EFSampleTableContext : DbContext
     {
-        public EFSampleDBContext(string connectionString) : base(GetOptions(connectionString))
+        public EFSampleTableContext(string connectionString) : base(GetOptions(connectionString))
         { }
 
 
@@ -15,6 +15,6 @@ namespace EFCoreSample.Persistence.Context
             return SqlServerDbContextOptionsExtensions.UseSqlServer(new DbContextOptionsBuilder(), connectionString).Options;
         }
 
-        public DbSet<SampleDB> SampleDBs { get; set; }
+        public DbSet<SampleTable> SampleTable { get; set; }
     }
 }
