@@ -1,9 +1,9 @@
 ﻿DROP TABLE IF EXISTS SAMPLETABLE;	
 
 CREATE TABLE SAMPLETABLE (
-    ID INT PRIMARY KEY CLUSTERED,
+    ID INT IDENTITY NOT NULL PRIMARY KEY,   
 	NAME nvarchar(200),
 );
 
-insert into SAMPLETABLE values (1, 'Temp Name');
-insert into SAMPLETABLE values (2, 'Temp 2');
+insert into SAMPLETABLE values ( 'Temp Name');
+insert into SAMPLETABLE values ( 'Temp 2');
