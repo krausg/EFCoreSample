@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace EFCoreSample.Persistence.NativeSQLSample
 {
-    using EFCoreSample.Config.AppSettings;
+    using EFCoreSample.Config.Properties;
     using EFCoreSample.Util.Resource;
     using Util;
 
@@ -12,10 +12,10 @@ namespace EFCoreSample.Persistence.NativeSQLSample
 
         private readonly SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder
         {
-            DataSource = AppSettings.DataSource,
-            UserID = AppSettings.UserID,
-            Password = AppSettings.Password,
-            InitialCatalog = AppSettings.InitialCatalog
+            DataSource = Resources.DataSource,
+            UserID = Resources.UserID,
+            Password = Resources.Password,
+            InitialCatalog = Resources.InitialCatalog
         };
 
         public NativeSampleDBDAO()

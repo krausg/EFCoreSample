@@ -6,18 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="appSettings.Designer.cs">
-      <DependentUpon>AppSettings.resx</DependentUpon>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="AppSettings.resx">
-      <LastGenOutput>appSettings.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>EFCoreSample.Config.AppSettings</CustomToolNamespace>
+      <CustomToolNamespace></CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
 

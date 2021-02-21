@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
-		<StartupObject>EFCoreSample.Core.ProgramEntry</StartupObject>
+		<StartupObject>EFCoreSample.Core.Main.ProgramEntry</StartupObject>
 		<UserSecretsId>df38bcb0-cdfa-4838-98ff-06b5b9e3b634</UserSecretsId>
 	</PropertyGroup>
 

@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreSample.Config", "EFCoreSample.Config\EFCoreSample.Config.csproj", "{6ADAF561-2DEB-47D2-8391-7802BB761951}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreSample.Core", "EFCoreSample.Core\EFCoreSample.Core.csproj", "{AB96D5E2-B3C7-4C26-827E-52AB0D1C9A28}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C0B39CA0-0A33-488F-A79B-8FF9B0FBEDA6} = {C0B39CA0-0A33-488F-A79B-8FF9B0FBEDA6}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreSample.Persistence", "EFCoreSample.Persistence\EFCoreSample.Persistence.csproj", "{5352555F-B449-4E99-B26C-1A3786DEF758}"
 EndProject
