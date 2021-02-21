@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="resources\scripts\resetDB.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="resources\scripts\resetDB.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Config\Config.csproj" />
+		<ProjectReference Include="..\Util\Util.csproj" />
+	</ItemGroup>
+
+</Project>
